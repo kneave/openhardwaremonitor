@@ -1,11 +1,11 @@
 ﻿/*
- 
+
   This Source Code Form is subject to the terms of the Mozilla Public
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
- 
+
   Copyright (C) 2012-2020 Michael Möller <mmoeller@openhardwaremonitor.org>
-	
+
 */
 
 namespace OpenHardwareMonitor.Hardware.Mainboard {
@@ -272,6 +272,8 @@ namespace OpenHardwareMonitor.Hardware.Mainboard {
           return Model.X38_DS5;
         case "X570 AORUS MASTER":
           return Model.X570_AORUS_MASTER;
+        case "Z590I AORUS ULTRA":
+          return Model.Z590I_AORUS_ULTRA;
         case "X58A-UD3R":
           return Model.X58A_UD3R;
         case "Z68A-D3H-B3":

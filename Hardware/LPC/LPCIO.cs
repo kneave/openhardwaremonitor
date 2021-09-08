@@ -1,11 +1,11 @@
 ﻿/*
- 
+
   This Source Code Form is subject to the terms of the Mozilla Public
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
- 
+
   Copyright (C) 2009-2020 Michael Möller <mmoeller@openhardwaremonitor.org>
-	
+
 */
 
 using System;
@@ -35,10 +35,10 @@ namespace OpenHardwareMonitor.Hardware.LPC {
       report.Append(" with ID 0x");
       report.Append(chip.ToString("X", CultureInfo.InvariantCulture));
       report.Append(" at 0x");
-      report.Append(port.RegisterPort.ToString("X", 
+      report.Append(port.RegisterPort.ToString("X",
         CultureInfo.InvariantCulture));
       report.Append("/0x");
-      report.AppendLine(port.ValuePort.ToString("X", 
+      report.AppendLine(port.ValuePort.ToString("X",
         CultureInfo.InvariantCulture));
       report.AppendLine();
     }
@@ -265,7 +265,7 @@ namespace OpenHardwareMonitor.Hardware.LPC {
         if (id != 0 && id != 0xff) {
           port.WinbondNuvotonFintekExit();
 
-          ReportUnknownChip(port, "Winbond / Nuvoton / Fintek", 
+          ReportUnknownChip(port, "Winbond / Nuvoton / Fintek",
             ((id << 8) | revision));
         }
       } else {
@@ -287,7 +287,7 @@ namespace OpenHardwareMonitor.Hardware.LPC {
           chip == Chip.NCT6796D ||
           chip == Chip.NCT6796DR ||
           chip == Chip.NCT6797D ||
-          chip == Chip.NCT6798D)) 
+          chip == Chip.NCT6798D))
         {
           port.NuvotonDisableIOSpaceLock();
         }
@@ -407,6 +407,7 @@ namespace OpenHardwareMonitor.Hardware.LPC {
         case 0x8665: chip = Chip.IT8665E; break;
         case 0x8686: chip = Chip.IT8686E; break;
         case 0x8688: chip = Chip.IT8688E; break;
+        case 0x8689: chip = Chip.IT8689E; break;
         case 0x8705: chip = Chip.IT8705F; break;
         case 0x8712: chip = Chip.IT8712F; break;
         case 0x8716: chip = Chip.IT8716F; break;
